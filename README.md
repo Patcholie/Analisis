@@ -18,7 +18,7 @@
   <p>We invite you to explore the groundbreaking capabilities of Analisis-Web and experience the future of wound recognition and treatment. Visit our GitHub repository for more information on the program, including detailed technical documentation, implementation guidelines, and access to our open-source code. Together, let's transform the way we approach wound care, one AI diagnosis at a time.</p>
 
 <h2>Made within the AI4Y program</h2>
-<img src='https://www.google.com/url?sa=i&url=https%3A%2F%2Fta.education%2Fintel%2F&psig=AOvVaw0uZLAMcJCBET_qIYeZEW9Z&ust=1686512401440000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCNjouK26uf8CFQAAAAAdAAAAABAE'>
+<img src='https://i.ytimg.com/vi/MXINt_JB9t8/maxresdefault.jpg'>
 
   <h3 style="color: #555;">TODO</h3>
   <ul>
