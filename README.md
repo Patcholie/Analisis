@@ -17,5 +17,15 @@
   <h3>Join the Analisis-Web Community</h3>
   <p>We invite you to explore the groundbreaking capabilities of Analisis-Web and experience the future of wound recognition and treatment. Visit our GitHub repository for more information on the program, including detailed technical documentation, implementation guidelines, and access to our open-source code. Together, let's transform the way we approach wound care, one AI diagnosis at a time.</p>
 
+<h2>Made within the AI4Y program</h2>
+<img src='https://www.google.com/url?sa=i&url=https%3A%2F%2Fta.education%2Fintel%2F&psig=AOvVaw0uZLAMcJCBET_qIYeZEW9Z&ust=1686512401440000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCNjouK26uf8CFQAAAAAdAAAAABAE'>
 
+  <h3 style="color: #555;">TODO</h3>
+  <ul>
+    <li style="color: #666;">- Might change so it doesn't ask for camera in each website</li>
+    <li style="color: #666;">- Need to organize CSS</li>
+    <li style="16px; color: #666;">- We need to make the website work on phones (or create a new one specifically for phones)</li>
+    <li style="color: #666;">- Further design with more animations and an overall smoother look (main CSS)</li>
+    <li style="color: #666;">- Upload the website to a web address (analisis-ai.com // analisis-medical.com)</li>
+  </ul>
 
