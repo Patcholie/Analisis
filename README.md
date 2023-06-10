@@ -20,9 +20,9 @@
 <h2>Made within the AI4Y program</h2>
 <img src='https://i.ytimg.com/vi/MXINt_JB9t8/maxresdefault.jpg'>
 
-  <h3 style="color: #555;">TODO</h3>
+  <h3 style="color: #555;">TODO ( Currently Only CSS modifications )</h3>
   <ul>
-    <li style="color: #666;">- Might change so it doesn't ask for camera in each website</li>
+    <li style="color: #666;">- Might change so it doesn't ask for camera in each website ( Add a deticated camera.js file for the camera as a script )</li>
     <li style="color: #666;">- Need to organize CSS</li>
     <li style="16px; color: #666;">- We need to make the website work on phones (or create a new one specifically for phones)</li>
     <li style="color: #666;">- Further design with more animations and an overall smoother look (main CSS)</li>
