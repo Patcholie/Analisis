@@ -50,15 +50,3 @@
     <li style="color: #666;">- Further design with more animations and an overall smoother look (main CSS)</li>
     <li style="color: #666;">- Upload the website to a web address (analisis-ai.com // analisis-medical.com)</li>
   </ul>
-
-  <h2 style="color: #555;">Current GUI Look</h2>
-
-  <p style="font-family: Helevetica, sans-serif; font-size: 30px; color: #666;">App:</p>
-  <img src="https://github.com/Patcholie/Analisis-Web/assets/116463487/e7062c58-f616-4f08-aae5-ab8579f57d76" alt="App Screenshot">
-
-
-  <p style="font-family: Helevetica, sans-serif; font-size: 30px; color: #666;">Home:</p>
-  <img src="https://github.com/Patcholie/Analisis-Web/assets/116463487/3d831bfe-79f1-4091-ab21-4a6fca9a0216" alt="Home Screenshot">
-
-  <p style="font-family: Helevetica, sans-serif; font-size: 30px; color: #666;">Help:</p>
-  <img src="https://github.com/Patcholie/Analisis-Web/assets/116463487/fefe1b0e-b24a-4ce3-8393-3176f07f6329" alt="Help Screenshot">
