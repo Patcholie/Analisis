@@ -15,7 +15,6 @@ function handleButtonClick(buttonNumber) {
   selectedButton.classList.add("highlight");
 }
 
-
 document.addEventListener('DOMContentLoaded', function () {
   // Elements
   var links = document.querySelectorAll('.page-selector a');
@@ -60,10 +59,6 @@ document.addEventListener('DOMContentLoaded', function () {
       loadPage(href);
     });
   }
-
-
-
-
 
   // Set the initial playback rate of the video to 1x
   backgroundvideo.playbackRate = 1;
