@@ -760,8 +760,6 @@ label {
   overflow: hidden;
 }
 
-/* Animations Typewriter */
-
 .anim-typewriter1 {
   animation: typewriter 1s steps(130) 1s 1 normal both;
 }
