@@ -38,15 +38,12 @@
        <h2>Step 4: Injury Analysis</h2>
     </details>
        <p>Use the ChatGPT API to analyze the injury using the dedicated prompt:</p>
-       <p><strong>Prompt:</strong> "Analyzing [Injury Types]..."</p>
-       <p><strong>Result:</strong> [Analysis Result]</p>
+       <p><strong>Prompt:</strong> "You are a doctor..... [Injury Types]... [Place]..... etc."</p>
+       <p><strong>Result:</strong> [Analisis AI results]
+Step 1: ....
+Step 2: ....
+Step 3: ....
+Step 4: ....
+Step 5: ....</p>
      </details>
    </div>
-  <h3 style="color: #555;">TODO</h3>
-  <ul>
-    <li style="color: #666;">- Might change so it doesn't ask for camera in each website</li>
-    <li style="color: #666;">- Need to organize CSS</li>
-    <li style="16px; color: #666;">- We need to make the website work on phones (or create a new one specifically for phones)</li>
-    <li style="color: #666;">- Further design with more animations and an overall smoother look (main CSS)</li>
-    <li style="color: #666;">- Upload the website to a web address (analisis-ai.com // analisis-medical.com)</li>
-  </ul>
