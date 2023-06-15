@@ -1,0 +1,235 @@
+/* Main */
+
+.main-home {
+    margin-top: 10px;
+    position: relative;
+    background: rgba(0, 0, 0, 0.63);
+    height: 1500px;
+}
+
+.about li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.about li img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid #f0003d;
+    margin-right: 10px;
+}
+
+.about li span {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.presentation {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top:600px;
+}
+.main-text {
+    background-color: rgb(0, 0, 0, 0.5);
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 50px;
+}
+.main-text-header {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom:-100px;
+    transition: color 0.3s ease-in-out;
+    width: 55%;
+    height:11%;
+    text-align: center;
+
+    
+}
+.main-text-header:hover {
+    color: #f0003d;
+    animation: borderAnimation 1s linear infinite;
+
+}
+
+.team-members-header {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top:270px;
+    transition: color 0.3s ease-in-out;
+    text-align: center;
+    width: 45%;
+    height:13%;
+    
+}
+.team-members-header:hover {
+    color: #f0003d;
+    animation: borderAnimation 1s linear infinite;
+}
+
+.team-members {
+    text-align: left;
+    margin-left: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 300px;
+    /* align images to the left */
+}
+
+/* Team Members */
+.team-members .team-member-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 0;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    background-color: #0f0f0f;
+    position: relative;
+    overflow: hidden;
+}
+
+.team-members .team-member-image:before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(to right,
+            rgba(240, 0, 61, 0),
+            rgba(240, 0, 61, 0.5));
+    z-index: 1;
+}
+
+.team-members .team-member-image:after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(to bottom,
+            rgba(240, 0, 61, 0),
+            rgba(240, 0, 61, 0.5));
+    z-index: 1;
+}
+
+
+.team-member {
+    display: inline-block;
+    margin: 20px;
+    transition: transform 0.6s ease-in-out;
+}
+
+.team-member:hover {
+    transform: scale(1.2);
+}
+
+.team-member a {
+    color: #ffffff;
+    /* set link color to dark */
+    font-weight: bold;
+    /* set font weight to normal */
+    font-style: italic;
+    /* set font style to italic */
+    text-decoration: none;
+    /* remove underline from link */
+    transition: font-weight 0.3s ease-in-out;
+    /* add transition effect to font weight */
+}
+
+.team-member-name {
+    display: list-item;
+    list-style: none;
+}
+
+
+/* Lines of Typewriter animation */
+
+.line-1,.line-2,.line-3,.line-4,.line-5 {
+    position: relative;
+    top: 50%;
+    width: 24em;
+    margin: 0 auto;
+    font-size: 1.3em;
+
+    border-right: 2px solid rgba(255, 255, 255, 0);
+    margin-left: -0px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+
+/* Animations Typewriter */
+
+.anim-typewriter1 {
+    animation: typewriter 1s steps(130) 1s 1 normal both;
+}
+
+.anim-typewriter2 {
+    animation: typewriter 2s steps(130) 1s 1 normal both;
+}
+
+.anim-typewriter3 {
+    animation: typewriter 1s steps(130) 1s 1 normal both;
+}
+
+.anim-typewriter4 {
+    animation: typewriter 3s steps(130) 1s 1 normal both;
+}
+
+.anim-typewriter5 {
+    animation: typewriter 4s steps(130) 1s 1 normal both;
+}
+
+.anim-typewriter6 {
+    animation: typewriter 1s steps(40) 1s 1 normal both;
+}
+
+/* Footer */
+.footer-note {
+    margin-top: 1500px;
+    background-color: #000000e1;
+    position: absolute;
+    left: 50%;
+    width:100%;
+    text-align: center;
+    transform: translateX(-50%);
+}
+
+/* Typewriter Animation */
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 120em;
+    }
+}
+
+@keyframes borderAnimation {
+    0% {
+      border: 2px dotted;
+    }
+    50% {
+      border: 2px dotted #ffffff;
+      border-radius: 2%;
+    }
+    100% {
+      border: 2px dotted;
+      border-radius: 1%;
+
+    }
+  }
+    

@@ -1,0 +1,134 @@
+/* Main */
+.main-help {
+    background-color: rgba(0, 0, 0, 0.856);
+    margin-top: 20px;
+    width: 98%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+}
+
+/*Fact List */
+
+.fact-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 300px;
+    margin-top: 20px;
+}
+
+.fact-list li {
+    margin-bottom: 20px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.fact-list li:before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: #f0003d;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    border-radius: 10%;
+}
+
+/* Q&A */
+
+
+.qa-list {
+    margin: 0;
+    padding: 0;
+}
+
+.qa-list dt {
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.qa-list dd {
+    margin-left: 20px;
+}
+
+
+.f {
+    position: relative;
+    top: 50%;
+    font-size: 125%;
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255, 255, 255, 0);
+    margin-left: -0px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+.q{
+    font-size: 150%;
+    position: relative;
+    top: 50%;
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255, 255, 255, 0);
+    margin-left: -0px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 120em;
+    }
+}
+
+/* Animations Typewriter */
+
+.anim-typewriter1 {
+    animation: typewriter 1s steps(130) 1s 1 normal both;
+}
+
+.anim-typewriter2 {
+    animation: typewriter 2s steps(130) 1s 1 normal both;
+}
+
+.anim-typewriter3 {
+    animation: typewriter 1s steps(130) 1s 1 normal both;
+}
+
+.anim-typewriter4 {
+    animation: typewriter 3s steps(130) 1s 1 normal both;
+}
+
+.anim-typewriter5 {
+    animation: typewriter 4s steps(130) 1s 1 normal both;
+}
+
+.anim-typewriter6 {
+    animation: typewriter 1s steps(40) 1s 1 normal both;
+}
+
+
+/* Footer */
+footer {
+    background-color: #242424;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.75rem;
+}
