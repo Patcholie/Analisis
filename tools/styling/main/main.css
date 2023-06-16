@@ -9,7 +9,7 @@
   /* to be continued */
 }
 
-/*
+
 .transition-fade {
   opacity: 1;
   transition: 1000ms;
@@ -26,14 +26,16 @@ html.is-animating .transition-fade {
 html.is-leaving .transition-fade {
   opacity:0;
 }
-*/
+
 
 body {
   font-family: "unispace", sans-serif;
-  overflow-x: hidden;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
   background-color: transparent;
   font-size: 0.75em;
   color: white;
+  max-width: 1920px;
+
 
 }
 

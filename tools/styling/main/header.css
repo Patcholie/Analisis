@@ -1,6 +1,5 @@
 .content {
     z-index: 9999;
-    transition: opacity 0.5s ease-in-out;
     position: relative;
     top: 0px;
     background: rgba(0, 0, 0, 0.616);
@@ -10,8 +9,15 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 9999;
-      
+    min-width: 1860px;
   }
+
+
+.highlight-selector {
+  background-color: #f0003d;
+  border: 1px solid black;
+  transition: background-color 0.5s ease;
+}
     
 .logo img {
   height: 40px;
@@ -62,9 +68,5 @@ nav ul li a:hover {
   color: #333;
 }
 
-.page-selector li.active a {
-  background-color: white;
-  color: #333;
-}
 
   
