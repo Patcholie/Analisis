@@ -11,7 +11,10 @@ main {
     background-color: #0f0f0fc2;
     border: #050505;
     height: 1000px;
-    width:100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width:1880px;
 }
 
 /* Body Part Selection */
