@@ -8,7 +8,7 @@ main {
 .main-app {
     margin-top: 10px;
     position: relative;
-    background-color: #0f0f0fc2;
+    background-color: rgba(0, 0, 0, 0.705);
     border: #050505;
     height: 1000px;
     position: absolute;
