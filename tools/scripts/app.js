@@ -1,8 +1,7 @@
-// Variables
+
 let BodyPart; // Represents the selected body part
 let dots = ""; // Used for loading animation
 let cameraDetected = true; // Indicates if the camera is detected
-
 // Function to handle button clicks
 function handleButtonClick(buttonNumber) {
   BodyPart = buttonNumber; // Assign the buttonNumber to BodyPart
@@ -18,6 +17,7 @@ function handleButtonClick(buttonNumber) {
 }
 // DOMContentLoaded event listener
 document.addEventListener("DOMContentLoaded", function () {
+  
   // Elements
   var plus = document.querySelector(".plus-sign");
   const resultContainer = document.getElementById("result-container");
@@ -187,3 +187,4 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+

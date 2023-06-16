@@ -1,4 +1,17 @@
-document.addEventListener('DOMContentLoaded', function () {
+const swup = new Swup();
+
+function highlight_upper() {
+  // Remove the 'highlight' class from all anchor elements
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    links[i].classList.remove('highlight-selector');
+  }
+  
+  // Add the 'highlight' class to the clicked anchor element
+  event.target.classList.add('highlight-selector');
+}
+
+
   var links = document.querySelectorAll('.page-selector a');
   var backgroundvideo = document.getElementById('background-video');
 
@@ -18,15 +31,36 @@ document.addEventListener('DOMContentLoaded', function () {
     var minDistance = 0;
     var maxDistance = 100;
     var minPlaybackRate = 1;
-    var maxPlaybackRate = 20;
+    var maxPlaybackRate = 25;
     var playbackRate = minPlaybackRate + (
       (distance - minDistance) /
       (maxDistance - minDistance) *
       (maxPlaybackRate - minPlaybackRate)
     );
 
-    backgroundvideo.playbackRate = playbackRate;
-  })
+    try {
+      backgroundvideo.playbackRate = parseInt(playbackRate);
+    } catch (error) {
+      // Handle the error without revealing specific details
+      console.log();
+    }
+      })
   
+  
+
+swup.on('animationInDone', () => {
+  loadScript('tools/scripts/app.js');
+  console.log('Content Replaced')
+  if (window.location.href.endsWith("index.html")) {
+    // Reload the page
+    location.reload();
+  }
   
 });
+
+function loadScript(url) {
+  const script = document.createElement('script');
+  script.src = url;
+  document.body.appendChild(script);
+}
+
