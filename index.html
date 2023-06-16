@@ -1,152 +1,96 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Analisis - App</title>
+
+<head>
+  <title>Analisis - App</title>
+  <script defer src="https://unpkg.com/swup@3"></script>
+  <script defer src="tools/scripts/cosmetic.js"></script>
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="tools/styling/main/header.css" />
+  <link rel="stylesheet" type="text/css" href="tools/styling/main/main.css" />
+
+</head>
+
+<body>
+  <video autoplay muted loop id="background-video">
+    <source src="assets/videos/back_test.mp4" type="video/mp4" />
+  </video>
+
+  <div class="content">
+    <header>
+      <nav>
+        <a href="/home.html" class="logo">
+          <img src="assets/images/logo.png" alt="Analisis Logo" />
+        </a>
+        <ul class="page-selector">
+          <li><a href="/index.html" onclick='highlight_upper()'>App</a></li>
+          <li><a href="/home.html" onclick='highlight_upper()'>Home</a></li>
+          <li><a href="/help.html" onclick='highlight_upper()'>Help</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+  <main id="swup" class="transition-fade">
     <link rel="stylesheet" type="text/css" href="tools/styling/app.css" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="tools/styling/main/header.css"
-    />
-    <link rel="stylesheet" type="text/css" href="tools/styling/main/main.css" />
-  </head>
-  <body>
-    <video autoplay muted loop id="background-video">
-      <source src="assets/videos/back_test.mp4" type="video/mp4" />
-    </video>
+    <div class="main-app">
+      <main>
+        <div class="camera-container">
+          <video id="video" autoplay playsinline></video>
+          <div class="overlay">
+            <div class="plus-sign">+</div>
+          </div>
+          <canvas id="canvas"></canvas>
+        </div>
 
-    <div class="content">
-      <header>
-        <nav>
-          <a href="home.html" class="logo">
-            <img src="assets/images/logo.png" alt="Analisis Logo" />
-          </a>
-          <ul class="page-selector">
-            <li class="active"><a href="index.html">App</a></li>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="help.html">Help</a></li>
-            <li><a href="history.html">History</a></li>
-          </ul>
-        </nav>
-      </header>
+        <div class="slider-container">
+          <br />
+          <input type="range" min="0" max="10" value="0" class="slider" id="myRange" />
+          <p id="slider-value" style="font-size: 16px">No pain at all</p>
+        </div>
+
+        <div class="text-area-container">
+          <textarea id="text-area" rows="4" cols="50" placeholder="Enter notes about the wound here"></textarea>
+        </div>
+
+        <div class="body-part-container">
+          <div class="buttons">
+            <button type="submit" class="button" id="button1" onclick="handleButtonClick(1)"></button>
+            <div class="Head"></div>
+            <button type="submit" class="button" id="button2" onclick="handleButtonClick(2)"></button>
+            <div class="Chest"></div>
+            <button type="submit" class="button" id="button3" onclick="handleButtonClick(3)"></button>
+            <div class="R-Arm"></div>
+            <button type="submit" class="button" id="button4" onclick="handleButtonClick(4)"></button>
+            <div class="R-Hand"></div>
+            <button type="submit" class="button" id="button5" onclick="handleButtonClick(5)"></button>
+            <div class="L-Arm"></div>
+            <button type="submit" class="button" id="button6" onclick="handleButtonClick(6)"></button>
+            <div class="L-Hand"></div>
+            <button type="submit" class="button" id="button7" onclick="handleButtonClick(7)"></button>
+            <div class="Torso"></div>
+            <button type="submit" class="button" id="button8" onclick="handleButtonClick(8)"></button>
+            <div class="Legs"></div>
+            <button type="submit" class="button" id="button9" onclick="handleButtonClick(9)"></button>
+            <div class="Feet"></div>
+          </div>
+        </div>
+
+        <div class="button-container">
+          <button id="analyze-button">Start ANALISIS (CTRL + I)</button>
+        </div>
+
+        <div class="treatment-container">
+          <hr />
+          <h2 id="treat">TREATMENT</h2>
+          <div class="result-container" id="result-container">
+            <p id="result-text"></p>
+          </div>
+        </div>
+      </main>
     </div>
+  </main>
+  
+  <script src="tools/scripts/app.js"></script>
+</body>
 
-      <div class="main-app">
-        <main>
-          <div class="camera-container">
-            <video id="video" autoplay playsinline></video>
-            <div class="overlay">
-              <div class="plus-sign">+</div>
-            </div>
-            <canvas id="canvas"></canvas>
-          </div>
-
-          <div class="slider-container">
-            <br />
-            <input
-              type="range"
-              min="0"
-              max="10"
-              value="0"
-              class="slider"
-              id="myRange"
-            />
-            <p id="slider-value" style="font-size: 16px">No pain at all</p>
-          </div>
-
-          <div class="text-area-container">
-            <textarea
-              id="text-area"
-              rows="4"
-              cols="50"
-              placeholder="Enter notes about the wound here"
-            ></textarea>
-          </div>
-
-          <div class="body-part-container">
-            <div class="buttons">
-              <button
-                type="submit"
-                class="button"
-                id="button1"
-                onclick="handleButtonClick(1)"
-              ></button>
-              <div class="Head"></div>
-              <button
-                type="submit"
-                class="button"
-                id="button2"
-                onclick="handleButtonClick(2)"
-              ></button>
-              <div class="Chest"></div>
-              <button
-                type="submit"
-                class="button"
-                id="button3"
-                onclick="handleButtonClick(3)"
-              ></button>
-              <div class="R-Arm"></div>
-              <button
-                type="submit"
-                class="button"
-                id="button4"
-                onclick="handleButtonClick(4)"
-              ></button>
-              <div class="R-Hand"></div>
-              <button
-                type="submit"
-                class="button"
-                id="button5"
-                onclick="handleButtonClick(5)"
-              ></button>
-              <div class="L-Arm"></div>
-              <button
-                type="submit"
-                class="button"
-                id="button6"
-                onclick="handleButtonClick(6)"
-              ></button>
-              <div class="L-Hand"></div>
-              <button
-                type="submit"
-                class="button"
-                id="button7"
-                onclick="handleButtonClick(7)"
-              ></button>
-              <div class="Torso"></div>
-              <button
-                type="submit"
-                class="button"
-                id="button8"
-                onclick="handleButtonClick(8)"
-              ></button>
-              <div class="Legs"></div>
-              <button
-                type="submit"
-                class="button"
-                id="button9"
-                onclick="handleButtonClick(9)"
-              ></button>
-              <div class="Feet"></div>
-            </div>
-          </div>
-
-          <div class="button-container">
-            <button id="analyze-button">Start ANALISIS (CTRL + I)</button>
-          </div>
-
-          <div class="treatment-container">
-            <hr />
-            <h2 id="treat">TREATMENT</h2>
-            <div class="result-container" id="result-container">
-              <p id="result-text"></p>
-            </div>
-          </div>
-        </main>
-      </div>
-  </body>
 </html>
-<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script defer src="tools/scripts/app.js"></script>
-<script defer src="tools/scripts/cosmetic.js"></script>

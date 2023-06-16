@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Analisis - Home</title>
-    <link rel="stylesheet" type="text/css" href="tools/styling/home.css" />
-    <link rel="stylesheet" type="text/css" href="tools/styling/main/main.css" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="tools/styling/main/header.css"
-    />
-  </head>
-  <main>
-    <video autoplay muted loop id="background-video">
-      <source src="assets/videos/back_test.mp4" type="video/mp4" />
-    </video>
 
-    <div class="content">
-      <header id="header">
-        <nav>
-          <a href="home.html" class="logo">
-            <img src="assets/images/logo.png" alt="Analisis Logo" />
-          </a>
-          <ul class="page-selector">
-            <li><a href="index.html">App</a></li>
-            <li class="active"><a href="home.html">Home</a></li>
-            <li><a href="help.html">Help</a></li>
-            <li><a href="history.html">History</a></li>
-          </ul>
-        </nav>
-      </header>
-    </div>
+<head>
+  <title>Analisis - Home</title>
+  <script defer src="https://unpkg.com/swup@3"></script>
+  <script defer src="tools/scripts/cosmetic.js"></script>
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  
+  <link rel="stylesheet" type="text/css" href="tools/styling/main/main.css" />
+  <link rel="stylesheet" type="text/css" href="tools/styling/main/header.css" />
+</head>
+<main>
+  <video autoplay muted loop id="background-video">
+    <source src="assets/videos/back_test.mp4" type="video/mp4" />
+  </video>
+
+  <div class="content">
+    <header id="header">
+      <nav>
+        <a href="home.html" class="logo">
+          <img src="assets/images/logo.png" alt="Analisis Logo" />
+        </a>
+        <ul class="page-selector">
+          <li><a href="/index.html" onclick='highlight_upper()'>App</a></li>
+          <li><a href="/home.html" onclick='highlight_upper()'>Home</a></li>
+          <li><a href="/help.html" onclick='highlight_upper()'>Help</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
   <main id="swup" class="transition-fade">
+    <link rel="stylesheet" type="text/css" href="tools/styling/home.css" />
     <div class="main-home">
       <section class="about">
         <h1 class="main-text-header">ABOUT ANALISIS</h1>
@@ -61,57 +61,31 @@
         <div class="team-members">
           <div class="team-member">
             <a href="https://github.com/marmust" target="_blank">
-              <img
-                src="assets/images/Daniel Varkin.png"
-                alt="Daniel Varkin"
-                class="team-member-image"
-              />
+              <img src="assets/images/Daniel Varkin.png" alt="Daniel Varkin" class="team-member-image" />
               <span class="team-member-name">Daniel Varkin</span>
             </a>
           </div>
           <div class="team-member">
-            <a
-              href="https://www.linkedin.com/in/aviv-shaked-59a4b7271/"
-              target="_blank"
-            >
-              <img
-                src="assets/images/Aviv Shaked.png"
-                alt="Aviv Shaked"
-                class="team-member-image"
-              />
+            <a href="https://www.linkedin.com/in/aviv-shaked-59a4b7271/" target="_blank">
+              <img src="assets/images/Aviv Shaked.png" alt="Aviv Shaked" class="team-member-image" />
               <span class="team-member-name">Aviv Shaked</span>
             </a>
           </div>
           <div class="team-member">
-            <a
-              href="https://twitter.com/BingEnjoyer1?t=U9uemwI9Xm77-MVJwY6YPw&s=09"
-              target="_blank"
-            >
-              <img
-                src="assets/images/Yair Amar.png"
-                alt="Yair Amar"
-                class="team-member-image"
-              />
+            <a href="https://twitter.com/BingEnjoyer1?t=U9uemwI9Xm77-MVJwY6YPw&s=09" target="_blank">
+              <img src="assets/images/Yair Amar.png" alt="Yair Amar" class="team-member-image" />
               <span class="team-member-name">Yair Amar</span>
             </a>
           </div>
           <div class="team-member">
             <a href="https://barbermessedup.netlify.app/" target="_blank">
-              <img
-                src="assets/images/Eitan Worms.png"
-                alt="Eitan Worms"
-                class="team-member-image"
-              />
+              <img src="assets/images/Eitan Worms.png" alt="Eitan Worms" class="team-member-image" />
               <span class="team-member-name">Eitan Worms</span>
             </a>
           </div>
           <div class="team-member">
             <a href="https://e621.net/posts/4038486?q=lizard" target="_blank">
-              <img
-                src="assets/images/Lior Kuznatz.png"
-                alt="Lior Kuznatz"
-                class="team-member-image"
-              />
+              <img src="assets/images/Lior Kuznatz.png" alt="Lior Kuznatz" class="team-member-image" />
               <span class="team-member-name">Lior Kuznatz</span>
             </a>
           </div>
@@ -120,12 +94,7 @@
 
       <section class="presentation">
         <h1>Presentation with more info about this project:</h1>
-        <iframe
-          src="assets/presentation.html"
-          width="960"
-          height="540"
-          scrolling="no"
-        ></iframe>
+        <iframe src="assets/presentation.html" width="960" height="540" scrolling="no"></iframe>
       </section>
 
       <footer class="footer-note">
@@ -136,7 +105,8 @@
         </p>
       </footer>
     </div>
+    
   </main>
-</body>
+  </body>
+
 </html>
-<script defer src="tools/scripts/cosmetic.js"></script>

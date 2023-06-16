@@ -1,91 +1,97 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>ANALISIS - Help</title>
-    <link rel="stylesheet" type="text/css" href="tools/styling/help.css" />
-    <link rel="stylesheet" type="text/css" href="tools/styling/main/main.css" />
-    <link rel="stylesheet" type="text/css" href="tools/styling/main/header.css" />
-  </head>
-  <body>
-    <video autoplay muted loop id="background-video">
-      <source src="assets/videos/back_test.mp4" type="video/mp4" />
-    </video>
 
-    <div class="content">
-      <header id="header">
-        <nav>
-          <a href="home.html" class="logo">
-            <img src="assets/images/logo.png" alt="Analisis Logo" />
-          </a>
-          <ul class="page-selector">
-            <li><a href="index.html">App</a></li>
-            <li><a href="home.html">Home</a></li>
-            <li class="active"><a href="help.html">Help</a></li>
-            <li><a href="history.html">History</a></li>
-          </ul>
-        </nav>
-      </header>
-    </div>
-  <main id="swup" class="transition-fade">
-      <div class="main-help">
-        <h1>HELP AND SUPPORT</h1>
-        <br />
-        <h2>Helpful Tips:</h2>
-        <ul class="fact-list">
-          <li class="f anim-typewriter4">
-            Try to write informative prompts, describe how you got the injury, how
-            does the injury feel (itching, hot, etc.) and such, though don't write
-            too much.
-          </li>
-          <li class="f anim-typewriter3">
-            Try to center the injury in the middle of the camera (The + in the
-            middle of the live camera view) for best results.
-          </li>
-          <li class="f anim-typewriter2">
-            Try to be as accurate as you can when it comes to the pain level (The
-            description of the pain level does not need to exactly describe how
-            painful the injury is).
-          </li>
-          <li class="f anim-typewriter4">
-            The selections under the 'ANALISIS' button should describe how much
-            available resources you have at your place (It does not have to be
-            accurate).
-          </li>
-          <li class="f anim-typewriter1">
-            The body part selection is meant to help the output be more accurate,
-            try to select the area that fits the best.
-          </li>
-          <li class="f anim-typewriter3">
-            Soon we will add more features and make ANALISIS more accurate and
-            overall better (Including UI Changes, Model Changes, etc.).
-          </li>
+<head>
+  <title>ANALISIS - Help</title>
+  <script defer src="https://unpkg.com/swup@3"></script>
+  <script defer src="tools/scripts/cosmetic.js"></script>
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  
+  <link rel="stylesheet" type="text/css" href="tools/styling/main/main.css" />
+  <link rel="stylesheet" type="text/css" href="tools/styling/main/header.css" />
+</head>
+
+<body>
+  <video autoplay muted loop id="background-video">
+    <source src="assets/videos/back_test.mp4" type="video/mp4" />
+  </video>
+
+  <div class="content">
+    <header id="header">
+      <nav>
+        <a href="home.html" class="logo">
+          <img src="assets/images/logo.png" alt="Analisis Logo" />
+        </a>
+        <ul class="page-selector">
+          <li><a href="/index.html" onclick='highlight_upper()'>App</a></li>
+          <li><a href="/home.html" onclick='highlight_upper()'>Home</a></li>
+          <li><a href="/help.html" onclick='highlight_upper()'>Help</a></li>
         </ul>
-        <h2>Examples:</h2>
-        <dl>
-          <dt class="q anim-typewriter1">Ex: An Example of a good prompt:</dt>
-          <dd class="q anim-typewriter1">
-            - A mosquito bit me, it itches and it happened a few minutes ago.
-          </dd>
-          <dt class="q anim-typewriter5">
-            Ex: An Example of good pain level according to this prompt:
-          </dt>
-          <dd class="q anim-typewriter5">
-            - Mild pain (discomforting but can be ignored).
-          </dd>
-          <dt class="q anim-typewriter3">Ex: An Example of a good prompt:</dt>
-          <dd class="q anim-typewriter3">
-            - I got shot by a gun, I am bleeding and I can't control it.
-          </dd>
-          <dt class="q anim-typewriter2">
-            Ex: An Example of good pain level according to this prompt:
-          </dt>
-          <dd class="q anim-typewriter2">
-            - Worst pain imaginable, paramedics are required immediately
-            (unbearable and may lead to unconsciousness)
-          </dd>
-        </dl>
-      </div>
+      </nav>
+    </header>
+  </div>
+  <main id="swup" class="transition-fade">
+    <link rel="stylesheet" type="text/css" href="tools/styling/help.css" />
+    <div class="main-help">
+      <h1>HELP AND SUPPORT</h1>
+      <br />
+      <h2>Helpful Tips:</h2>
+      <ul class="fact-list">
+        <li class="f anim-typewriter4">
+          Try to write informative prompts, describe how you got the injury, how
+          does the injury feel (itching, hot, etc.) and such, though don't write
+          too much.
+        </li>
+        <li class="f anim-typewriter3">
+          Try to center the injury in the middle of the camera (The + in the
+          middle of the live camera view) for best results.
+        </li>
+        <li class="f anim-typewriter2">
+          Try to be as accurate as you can when it comes to the pain level (The
+          description of the pain level does not need to exactly describe how
+          painful the injury is).
+        </li>
+        <li class="f anim-typewriter4">
+          The selections under the 'ANALISIS' button should describe how much
+          available resources you have at your place (It does not have to be
+          accurate).
+        </li>
+        <li class="f anim-typewriter1">
+          The body part selection is meant to help the output be more accurate,
+          try to select the area that fits the best.
+        </li>
+        <li class="f anim-typewriter3">
+          Soon we will add more features and make ANALISIS more accurate and
+          overall better (Including UI Changes, Model Changes, etc.).
+        </li>
+      </ul>
+      <h2>Examples:</h2>
+      <dl>
+        <dt class="q anim-typewriter1">Ex: An Example of a good prompt:</dt>
+        <dd class="q anim-typewriter1">
+          - A mosquito bit me, it itches and it happened a few minutes ago.
+        </dd>
+        <dt class="q anim-typewriter5">
+          Ex: An Example of good pain level according to this prompt:
+        </dt>
+        <dd class="q anim-typewriter5">
+          - Mild pain (discomforting but can be ignored).
+        </dd>
+        <dt class="q anim-typewriter3">Ex: An Example of a good prompt:</dt>
+        <dd class="q anim-typewriter3">
+          - I got shot by a gun, I am bleeding and I can't control it.
+        </dd>
+        <dt class="q anim-typewriter2">
+          Ex: An Example of good pain level according to this prompt:
+        </dt>
+        <dd class="q anim-typewriter2">
+          - Worst pain imaginable, paramedics are required immediately
+          (unbearable and may lead to unconsciousness)
+        </dd>
+      </dl>
+    </div>
   </main>
+  
 </body>
+
 </html>
-<script defer src="tools/scripts/cosmetic.js"></script>
