@@ -23,9 +23,9 @@
           <img src="assets/images/logo.png" alt="Analisis Logo" />
         </a>
         <ul class="page-selector">
-          <li><a href="/index.html" onclick='highlight_upper()'>App</a></li>
-          <li><a href="/home.html" onclick='highlight_upper()'>Home</a></li>
-          <li><a href="/help.html" onclick='highlight_upper()'>Help</a></li>
+          <li><a href="Analisis/index.html" class='highlight-selector' onclick='highlight_upper()'>App</a></li>
+          <li><a href="Analisis/home.html" onclick='highlight_upper()'>Home</a></li>
+          <li><a href="Analisis/help.html" onclick='highlight_upper()'>Help</a></li>
         </ul>
       </nav>
     </header>
@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="tools/styling/app.css" />
     <div class="main-app">
       <main>
-        <div class="camera-container">
+        <div class="camera-container animate-on-scroll">
           <video id="video" autoplay playsinline></video>
           <div class="overlay">
             <div class="plus-sign">+</div>
@@ -79,7 +79,7 @@
           <button id="analyze-button">Start ANALISIS (CTRL + I)</button>
         </div>
 
-        <div class="treatment-container">
+        <div class="treatment-container animate-on-scroll">
           <hr />
           <h2 id="treat">TREATMENT</h2>
           <div class="result-container" id="result-container">
