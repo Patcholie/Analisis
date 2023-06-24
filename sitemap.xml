@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://www.analisis-ai.com/</loc>
+    <loc>http://analisis-ai.com</loc>
     <lastmod>2023-06-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>http://www.analisis-ai.com/home</loc>
+    <loc>http://analisis-ai.com/home</loc>
     <lastmod>2023-06-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.analisis-ai.com/help</loc>
+    <loc>http://analisis-ai.com/help</loc>
     <lastmod>2023-06-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
