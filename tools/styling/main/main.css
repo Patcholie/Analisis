@@ -1,3 +1,98 @@
+@media (max-width: 767px) {
+  #background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 0;
+    min-height: 0;
+    width: 100%;
+    transform: rotate(90deg);
+  }
+  #background-video {
+    display: none;
+  }
+  @font-face {
+    font-family: "unispace";
+    src: url("unispace bd.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-size: 0.25em;
+
+    /* Adjust font size if needed */
+  }
+
+
+  .transition-fade {
+    opacity: 1;
+    transition: 1000ms;
+    transform: translateX(0);
+    transform-origin: right;
+  }
+
+  html.is-animating .transition-fade {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  html.is-leaving .transition-fade {
+    opacity: 0;
+  }
+
+  body {
+    font-family: "unispace", sans-serif;
+    overflow-x: hidden;
+    background-color: transparent;
+    font-size: 0.75em;
+    color: white;
+    max-width: 100%; /* Adjust the max-width if needed */
+  }
+
+  @keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  #background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 0;
+    min-height: 0;
+    width: 100%;
+  }
+
+  /* Animations for scroll effect */
+  body {
+    background-color: #323442;
+    color: #fff;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto; /* Adjust the height if needed */
+  }
+
+  .animate-on-scroll {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: all 0.4s ease-out;
+    transition-delay: 0.2s;
+  }
+
+  .scroll-up {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+
 @font-face {
   font-family: "unispace";
   src: url("unispace bd.woff") format("woff");
@@ -59,3 +154,35 @@ body {
   min-height: 0%;
   width: 100%;
 }
+
+
+/* Animations for scroll effect */
+
+
+body {
+	background-color: #323442;
+	color: #fff;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+
+.animate-on-scroll {
+	opacity: 0;
+	transform: translate(0, 300px);
+	transition: all 0.4s ease-out;
+	transition-delay: 0.2s;
+}
+
+
+.scroll-up {
+	opacity: 1;
+	transform: translate(0, 100px);
+}
+
