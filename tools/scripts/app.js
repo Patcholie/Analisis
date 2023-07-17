@@ -35,10 +35,18 @@ document.addEventListener("DOMContentLoaded", function () {
   confirmationSound.volume = 0.7;
   errorSound.volume = 0.5;
 
-  // Function to start the camera
+  // Funtion to start the camera
   function startCamera() {
+    const constraints = {
+      video: {
+        width: 500,
+        height: 500,
+        facingMode: { exact: "environment" },
+      },
+    };
+  
     navigator.mediaDevices
-      .getUserMedia({ video: { width: 500, height: 500 } })
+      .getUserMedia(constraints)
       .then((stream) => {
         video.srcObject = stream;
         video.play();
@@ -46,10 +54,10 @@ document.addEventListener("DOMContentLoaded", function () {
       .catch((err) => {
         cameraDetected = false;
         console.log("Error: " + err);
-        plus.textContent = "Camera Not Detected!";
+        cplus.textContent = "Camera Not Detected!";
       });
   }
-
+  
   // Function to update the pain level text based on the slider value
   function updatePainLevel() {
     const painLevelText = {
