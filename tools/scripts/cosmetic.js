@@ -94,7 +94,7 @@ function loadScript(url) {
       // Function to redirect mobile users to a different page
       function redirectMobileUsers() {
           if (isMobileDevice()) {
-              window.location.href = "mobile.html"; // Replace "mobile.html" with your desired file
+              window.location.href = "mobile";
           }
       }
 
