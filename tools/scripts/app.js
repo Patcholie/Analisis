@@ -35,27 +35,32 @@ document.addEventListener("DOMContentLoaded", function () {
   confirmationSound.volume = 0.7;
   errorSound.volume = 0.5;
 
-  // Funtion to start the camera
+  // Function to start the camera
   function startCamera() {
-    const constraints = {
-      video: {
-        width: 500,
-        height: 500,
-        facingMode: { exact: "environment" },
-      },
-    };
-  
-    navigator.mediaDevices
-      .getUserMedia(constraints)
-      .then((stream) => {
-        video.srcObject = stream;
-        video.play();
-      })
-      .catch((err) => {
-        cameraDetected = false;
-        console.log("Error: " + err);
-        cplus.textContent = "Camera Not Detected!";
-      });
+    let supports = navigator.mediaDevices.getSupportedConstraints();
+    
+    if (supports['facingMode']) {
+      let constraints = {
+        video: {
+          width: 500,
+          height: 500,
+          facingMode: 'environment'
+        }
+      };
+      
+      navigator.mediaDevices.getUserMedia(constraints)
+        .then((stream) => {
+          video.srcObject = stream;
+          video.play();
+        })
+        .catch((err) => {
+          cameraDetected = false;
+          console.log("Error: " + err);
+          plus.textContent = "Camera Not Detected!";
+        });
+    } else {
+      console.log('Facing mode not supported');
+    }
   }
   
   // Function to update the pain level text based on the slider value
