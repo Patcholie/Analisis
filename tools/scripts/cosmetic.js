@@ -86,18 +86,3 @@ function loadScript(url) {
   document.body.appendChild(script);
 }
 
-        // Function to check if the user is using a mobile device
-        function isMobileDevice() {
-          return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
-      }
-
-      // Function to redirect mobile users to a different page
-      function redirectMobileUsers() {
-          if (isMobileDevice()) {
-              window.location.href = "mobile.html"; // Replace "mobile.html" with your desired file
-          }
-      }
-
-      // Call the redirect function when the page loads
-      window.onload = redirectMobileUsers;
-
