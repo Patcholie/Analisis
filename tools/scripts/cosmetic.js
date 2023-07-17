@@ -1,5 +1,27 @@
+
 const swup = new Swup();
 
+// Animation for scroll effects //
+
+const animation_elements = document.querySelectorAll('.animate-on-scroll, .animate-top-down');
+
+const observer = new IntersectionObserver((entries) => {
+	entries.forEach((entry) => {
+		if (entry.isIntersecting) {
+			entry.target.classList.add('scroll-up');
+		} else {
+			entry.target.classList.remove('scroll-up');
+		}
+	})
+}, {
+	threshold: 0.5
+});
+
+for (let i = 0; i < animation_elements.length; i++) {
+	const el = animation_elements[i];
+
+	observer.observe(el);
+}
 function highlight_upper() {
   // Remove the 'highlight' class from all anchor elements
   var links = document.getElementsByTagName('a');
@@ -63,4 +85,19 @@ function loadScript(url) {
   script.src = url;
   document.body.appendChild(script);
 }
+
+        // Function to check if the user is using a mobile device
+        function isMobileDevice() {
+          return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+      }
+
+      // Function to redirect mobile users to a different page
+      function redirectMobileUsers() {
+          if (isMobileDevice()) {
+              window.location.href = "mobile.html"; // Replace "mobile.html" with your desired file
+          }
+      }
+
+      // Call the redirect function when the page loads
+      window.onload = redirectMobileUsers;
 
