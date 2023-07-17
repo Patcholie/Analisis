@@ -3,19 +3,77 @@
     src: url("main/unispace bd.woff") format("woff");
     font-weight: bold;
     font-style: normal;
-  }
-  
-  body {
+}
+
+body {
     font-family: "unispace", sans-serif;
-    overflow-x: hidden; /* Hide horizontal scrollbar */
+    overflow-x: hidden;
+    /* Hide horizontal scrollbar */
     background-color: transparent;
     font-size: 0.50em;
     color: white;
     margin: 0;
     padding: 0;
-  }
-  
-  .main-app {
+}
+
+#logo {
+    cursor: pointer;
+    padding: 5px;
+    max-width: 64px;
+    max-height: 64px;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.5s;
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    10% {
+        transform: rotate(10deg);
+    }
+
+    20% {
+        transform: rotate(-10deg);
+    }
+
+    30% {
+        transform: rotate(10deg);
+    }
+
+    40% {
+        transform: rotate(-10deg);
+    }
+
+    50% {
+        transform: rotate(10deg);
+    }
+
+    60% {
+        transform: rotate(-10deg);
+    }
+
+    70% {
+        transform: rotate(10deg);
+    }
+
+    80% {
+        transform: rotate(-10deg);
+    }
+
+    90% {
+        transform: rotate(10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.main-app {
     z-index: 1;
     position: absolute;
     background-color: rgba(0, 0, 0, 0.5);
@@ -23,11 +81,11 @@
     left: 50%;
     transform: translateX(-50%);
     width: 95%;
-    height: 95%;
-  }
-  
-  #background-video {
-    pointer-events: none; /* Disables click and touch events */
+    height: 100%;
+    border-radius: 3px;
+}
+
+#background-video {
     z-index: 0;
     position: fixed;
     right: 0;
@@ -38,23 +96,32 @@
     height: 100vh;
     transform: rotate(90deg);
     margin-right: -100%;
-  }
-  
-  #video {
+}
+
+.camera-container {
+    margin-bottom: px;
+}
+
+
+#video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-  
-  .plus-sign {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+
+
+}
+
+.plus-sign {
     font-size: 6vw;
     color: #f0003d;
-  }
-  
-  .overlay {
+}
+
+.overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -63,9 +130,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  
-  .camera-container {
+}
+
+.camera-container {
     width: 70%;
     height: 70%;
     max-width: 512px;
@@ -76,9 +143,10 @@
     border-radius: 2%;
     box-sizing: border-box;
     margin: 0 auto;
-  }
-  
-  textarea {
+    margin-top: 30px;
+}
+
+textarea {
     width: 93%;
     height: 10%;
     margin-bottom: 10px;
@@ -89,14 +157,15 @@
     background-color: #404040;
     color: white;
     resize: none;
-  }
-  
-  textarea:hover {
+}
+
+textarea:hover {
     background-color: #2c2c2c;
     transition: background-color 0.2s ease-in-out;
-  }
-  
-  .slider {
+}
+
+.slider {
+    margin-top: 10px;
     -webkit-appearance: none;
     appearance: none;
     width: 95%;
@@ -109,16 +178,17 @@
     -webkit-transition: 0.2s;
     transition: opacity 0.2s;
     margin: 0 auto;
-    display: block;margin: 0 auto;
-  }
-  
-  
-  .slider::-webkit-slider-thumb:hover {
+    display: block;
+    margin: 0 auto;
+}
+
+
+.slider::-webkit-slider-thumb:hover {
     background-color: #000000;
     -webkit-transition: 0.4s;
-  }
-  
-  .slider::-webkit-slider-thumb {
+}
+
+.slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 3vw;
@@ -128,17 +198,18 @@
     border-radius: 10%;
     background: #f0003d;
     cursor: pointer;
-  }
-  
-  #slider-value {
+}
+
+#slider-value {
     color: rgb(255, 255, 255);
     font-size: 1vw;
-  }
-  
-  #analyze-button {
+    padding: 5px;
+}
+
+#analyze-button {
     margin-top: 7vw;
     height: 17vw;
-    max-width: 700px;
+    width:256px;
     color: white;
     background-color: #f0003d;
     border: none;
@@ -149,9 +220,9 @@
     transition: all 0.3s ease;
     display: block;
     margin: 0 auto;
-  }
-  
-  #analyze-button:before {
+}
+
+#analyze-button:before {
     content: "";
     position: absolute;
     top: -50%;
@@ -162,50 +233,157 @@
     transform: translate(-50%, -50%) rotate(45deg);
     transition: all 0.4s ease;
     opacity: 0;
-  }
-  
-  #analyze-button:hover {
+}
+
+#analyze-button:hover {
     background-color: #f0003d;
     color: white;
     transform: scale(1.05);
-  }
-  
-  #analyze-button:hover:before {
+}
+
+#analyze-button:hover:before {
     opacity: 1;
-  }
-  
-  #analyze-button:active {
+}
+
+#analyze-button:active {
     background-color: #050505;
     color: #f0003d;
     transform: scale(0.95);
-  }
-  
-  #analyze-button:active:before {
+}
+
+#analyze-button:active:before {
     opacity: 0;
-  }
-  
-  /* Additional styles for responsiveness */
-  
-  @media only screen and (max-width: 600px) {
-  
+}
+
+#result-container {
+    display: none;
+    white-space: break-spaces;
+    padding: 2.7em;
+    background-color: #050505;
+    border: 1px solid #f0003d;
+    border-radius: 0.5em;
+    font-size: 1.2em;
+    max-height: 110%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-bottom: 30px;
+    animation: text-pop-up-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation-delay: 3s;
+}
+
+#treat {
+    padding-bottom: 30px;
+}
+
+/* Additional styles for responsiveness */
+
+@media only screen and (max-width: 600px) {
+
     textarea {
-      font-size: 3vw;
+        font-size: 3vw;
+        display: block;
+        margin: 0 auto;
     }
-  
+
     .slider {
-      height: 2vw;
+        height: 2vw;
     }
-  
+
     #slider-value {
-      font-size: 3vw;
+        font-size: 3vw;
     }
-  
+
     #analyze-button {
-      margin-top: 7vw;
-      height: 17vw;
-      max-width: 90%;
-      font-size: 3vw;
+        height: 17vw;
+        max-width: 120%;
+        font-size: 3vw;
     }
-  }
-  
-  
+}
+
+/* Body Part 
+
+.body-part-container {
+    position: absolute;
+}
+
+#button1 {
+    /* Head*/
+   /* position:absolute;
+    margin-right:500px;
+    margin-top:-500px;
+    transform: scale(-30);
+    clip-path: polygon(45% 14%, 45% 10%, 47% 7%, 50% 6%, 53% 7%, 55% 10%, 55% 13%, 53% 15%, 53% 18%, 50% 20%, 47% 18%, 47% 15%);
+}
+
+#button7 {
+    /* Torso */
+   /* position:absolute;
+    transform: scale(-30);
+    clip-path: polygon(50% 38%, 57% 40%, 59% 53%, 55% 50%, 50% 50%, 45% 50%, 41% 53%, 43% 40%);
+
+}
+
+#button3 {
+    /* R-Arm */
+   /* transform: scale(-30);
+    clip-path: polygon(89% 24%, 87% 21%, 59% 21%, 61% 25%);
+
+}
+
+#button4 {
+    /* R-Hand*/
+   /* width: 180px;
+    height: 180px;
+    transform: scale(-30);
+    transform: rotate(-16deg);
+    clip-path: polygon(77% 42%, 87% 42%, 90% 47%, 77% 57%, 60% 57%, 56% 44%, 68% 36%, 82% 36%);
+}
+
+#button5 {
+    /*L-Arm */
+   /* transform: scale(-30);
+    clip-path: polygon(11% 24%, 13% 21%, 41% 21%, 39% 25%);
+}
+
+#button6 {
+    /* L-Hand*/
+   /* transform: scale(-30);
+    width: 180px;
+    height: 180px;
+    transform: rotate(16deg);
+    clip-path: polygon(23% 42%, 13% 42%, 10% 47%, 23% 57%, 40% 57%, 44% 44%, 32% 36%, 18% 36%);
+}
+
+#button2 {
+    /* Chest */
+   /* transform: scale(-30);
+    clip-path: polygon(50% 21%, 53% 19%, 59% 21%, 61% 26%, 57% 39%, 50% 37%, 43% 39%, 39% 26%, 41% 21%, 47% 19%);
+
+}
+
+#button8 {
+    /* Legs */
+   /* transform: scale(-30);
+    clip-path: polygon(56% 50%, 45% 50%, 41% 54%, 44% 89%, 47% 89%, 49% 50%, 51% 50%, 53% 89%, 56% 89%, 59% 54%);
+
+}
+
+#button9 {
+    /* Feet */
+   /* transform: scale(-30);
+    clip-path: polygon(44% 89%, 47% 89%, 52% 92%, 53% 89%, 56% 89%, 58% 92%, 52% 92%, 47% 89%, 48% 92%, 42% 92%);
+
+}
+
+
+.highlight {
+    animation: highlight 1s infinite;
+}
+
+.button:hover {
+    animation-name: highlight;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; 
+} */
+
