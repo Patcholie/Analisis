@@ -27,6 +27,7 @@
   }
   
   #background-video {
+    pointer-events: none; /* Disables click and touch events */
     z-index: 0;
     position: fixed;
     right: 0;
