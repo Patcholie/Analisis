@@ -1,58 +1,59 @@
 @font-face {
     font-family: "unispace";
-    src: url("unispace bd.woff") format("woff");
+    src: url("main/unispace bd.woff") format("woff");
     font-weight: bold;
     font-style: normal;
   }
   
-
-body {
+  body {
     font-family: "unispace", sans-serif;
     overflow-x: hidden; /* Hide horizontal scrollbar */
     background-color: transparent;
-    font-size: 0.75em;
+    font-size: 0.50em;
     color: white;
+    margin: 0;
+    padding: 0;
   }
-
-.main-app {
+  
+  .main-app {
     z-index: 1;
     position: absolute;
     background-color: rgba(0, 0, 0, 0.5);
     word-spacing: 2px;
     left: 50%;
     transform: translateX(-50%);
-    width:95%;
-    height:95%;
-}
-
-#background-video {
+    width: 95%;
+    height: 95%;
+  }
+  
+  #background-video {
     z-index: 0;
     position: fixed;
     right: 0;
     bottom: 0;
-    min-width: 0%;
-    min-height: 0%;
-    width: 200vh;
-    height:100%;
-    transform:rotate(90deg);
-    margin-right: -150%;
-}
-
-#video {
+    min-width: 0;
+    min-height: 0;
+    width: 300vw;
+    height: 100vh;
+    transform: rotate(90deg);
+    margin-right: -100%;
+  }
+  
+  #video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-.plus-sign {
-    font-size: 48px;
+  }
+  
+  .plus-sign {
+    font-size: 6vw;
     color: #f0003d;
-}
-
-.overlay {
+  }
+  
+  .overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -61,93 +62,95 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.camera-container {
-    width: 512px;
-    height: 512px;
+  }
+  
+  .camera-container {
+    width: 70%;
+    height: 70%;
+    max-width: 512px;
+    max-height: 512px;
     overflow: hidden;
     position: relative;
     border: 2px solid #f0003d;
     border-radius: 2%;
     box-sizing: border-box;
-    display: block;margin: 0 auto;
-}
-
-textarea {
-    width: 97%;
+    margin: 0 auto;
+  }
+  
+  textarea {
+    width: 93%;
     height: 10%;
     margin-bottom: 10px;
-    font-size: 20px;
+    font-size: 2vw;
     padding: 10px;
     border-radius: 5px;
     border: none;
     background-color: #404040;
     color: white;
     resize: none;
-}
-
-textarea:hover {
+  }
+  
+  textarea:hover {
     background-color: #2c2c2c;
     transition: background-color 0.2s ease-in-out;
-}
-
-
-.slider {
+  }
+  
+  .slider {
     -webkit-appearance: none;
     appearance: none;
     width: 95%;
-    height: 8px;
+    height: 1vw;
+    max-width: 512px;
     border-radius: 5px;
     background: #ddd;
     outline: none;
     opacity: 0.7;
     -webkit-transition: 0.2s;
     transition: opacity 0.2s;
+    margin: 0 auto;
     display: block;margin: 0 auto;
-
-}
-
-.slider:hover {
-    opacity: 1;
-    background: #f0003d;
-}
-
-.slider::-webkit-slider-thumb:hover {
-    background-color: #f1f1f1;
+  }
+  
+  
+  .slider::-webkit-slider-thumb:hover {
+    background-color: #000000;
     -webkit-transition: 0.4s;
-}
-
-.slider::-webkit-slider-thumb {
+  }
+  
+  .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 20px;
-    height: 20px;
+    width: 3vw;
+    height: 3vw;
+    max-width: 20px;
+    max-height: 20px;
     border-radius: 10%;
     background: #f0003d;
     cursor: pointer;
-}
-
-#slider-value {
-    color:white;
-}
-
-#analyze-button {
-    margin-top: 70px;
-    height: 170px;
-    width: 700px;
+  }
+  
+  #slider-value {
+    color: rgb(255, 255, 255);
+    font-size: 1vw;
+  }
+  
+  #analyze-button {
+    margin-top: 7vw;
+    height: 17vw;
+    max-width: 700px;
     color: white;
     background-color: #f0003d;
     border: none;
     border-radius: 8px;
-    font-size: 18px;
+    font-size: 1.8vw;
     position: relative;
     overflow: hidden;
     transition: all 0.3s ease;
-    display: block;margin: 0 auto;
-}
-
-#analyze-button:before {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  #analyze-button:before {
     content: "";
     position: absolute;
     top: -50%;
@@ -158,24 +161,50 @@ textarea:hover {
     transform: translate(-50%, -50%) rotate(45deg);
     transition: all 0.4s ease;
     opacity: 0;
-}
-
-#analyze-button:hover {
+  }
+  
+  #analyze-button:hover {
     background-color: #f0003d;
     color: white;
     transform: scale(1.05);
-}
-
-#analyze-button:hover:before {
+  }
+  
+  #analyze-button:hover:before {
     opacity: 1;
-}
-
-#analyze-button:active {
+  }
+  
+  #analyze-button:active {
     background-color: #050505;
     color: #f0003d;
     transform: scale(0.95);
-}
-
-#analyze-button:active:before {
+  }
+  
+  #analyze-button:active:before {
     opacity: 0;
-}
+  }
+  
+  /* Additional styles for responsiveness */
+  
+  @media only screen and (max-width: 600px) {
+  
+    textarea {
+      font-size: 3vw;
+    }
+  
+    .slider {
+      height: 2vw;
+    }
+  
+    #slider-value {
+      font-size: 3vw;
+    }
+  
+    #analyze-button {
+      margin-top: 7vw;
+      height: 17vw;
+      max-width: 90%;
+      font-size: 3vw;
+    }
+  }
+  
+  
