@@ -1,7 +1,6 @@
 const swup = new Swup();
 
 // Animation for scroll effects //
-
 const animation_elements = document.querySelectorAll('.animate-on-scroll, .animate-top-down');
 
 const observer = new IntersectionObserver((entries) => {
@@ -61,7 +60,7 @@ document.addEventListener('mousemove', function (event) {
     backgroundvideo.playbackRate = parseInt(playbackRate);
   } catch (error) {
     // Handle the error without revealing specific details
-    console.log();
+    console.log('Error:', error);
   }
 });
 
@@ -80,24 +79,37 @@ function loadScript(url) {
   document.body.appendChild(script);
 }
 
-const videoElement = document.getElementById('video');
-
-function startRearCamera() {
-  const constraints = {
-    video: { facingMode: 'environment' }
-  };
-
-  navigator.mediaDevices.getUserMedia(constraints)
-    .then(stream => {
-      videoElement.srcObject = stream;
-      videoElement.play();
-    })
-    .catch(error => {
-      console.error('Error accessing rear camera:', error);
-    });
+// Function to check if the user is using a mobile device
+function isMobileDevice() {
+  return (typeof window.orientation !== 'undefined') || (navigator.userAgent.indexOf('IEMobile') !== -1);
 }
 
-// Call the function to start the rear camera on mobile devices
-if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-  startRearCamera();
+// Function to access the rear camera on mobile devices
+function accessRearCamera() {
+  // Check if the device supports media devices and getUserMedia
+  if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+    // Constraints to access the rear camera
+    const constraints = {
+      video: { facingMode: { exact: 'environment' } }
+    };
+
+    // Access the rear camera
+    navigator.mediaDevices.getUserMedia(constraints)
+      .then((stream) => {
+        // Success callback, handle the stream or perform any necessary actions
+        console.log('Rear camera access successful');
+      })
+      .catch((error) => {
+        // Error callback, handle the error or display an error message
+        console.log('Error accessing rear camera:', error);
+      });
+  } else {
+    // Media devices or getUserMedia not supported
+    console.log('Media devices or getUserMedia not supported on this device');
+  }
+}
+
+// Call the accessRearCamera function when the page loads on a mobile device
+if (isMobileDevice()) {
+  window.addEventListener('DOMContentLoaded', accessRearCamera);
 }
