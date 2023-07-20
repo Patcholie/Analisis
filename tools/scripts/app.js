@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Elements
   var plus = document.querySelector(".plus-sign");
   const resultContainer = document.getElementById("result-container");
+  const TTS_Button = document.getElementById("tts-button");
   const video = document.getElementById("video");
   const canvas = document.getElementById("canvas");
   const confirmationSound = new Audio("assets/audio/confirmation.mp3");
@@ -107,6 +108,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     confirmationSound.play();
     resultContainer.style.display = "block";
+    if (TTS_Button) {
+      TTS_Button.style.display = "block";
+    } else {
+      console.log("DEVICE: PC");
+    }
+    
 
     // Show loading animation
     let intervalId = setInterval(function () {
@@ -161,7 +168,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.style.height = "auto";
         document.body.style.overflow = "auto";
         resultContainer.innerHTML =
-          "Error!!! \n \nPlease select a Body Part and make sure your camera is activated. \n(If you selected a Body Part and the camera is on, The error is an Internal Server Error.)\n";
+          "Error!!! \n \nThe Server Had An Error Processing This Request, The Server Might Be Unavailable.\n";
         resultContainer.style.fontSize = "1.3em";
         errorSound.play();
       },
