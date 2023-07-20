@@ -31,7 +31,7 @@ function playSound() {
   
     console.log('negro');
     var msg = new SpeechSynthesisUtterance();
-    msg.text = text.innerHTML;
+    msg.text = text.innerText;
   
     // When the speech synthesis is complete, re-enable the button
     msg.onend = function () {
