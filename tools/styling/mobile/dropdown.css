@@ -94,10 +94,10 @@
 }
 
 #menu {
-  position: relative;
-  height: 110vh;
-  margin: -100px 0 0 0px;
-  padding: 50px;
+  position: absolute;
+  width: 102.5vw;
+  height: 120vh;
+  margin: -100px 0 0 -50px;
   padding-top: 125px;
   text-align: center;
   

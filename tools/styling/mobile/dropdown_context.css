@@ -26,7 +26,7 @@
     position: relative;
     font-weight: bolder;
     font-size: 1.3em;
-    padding-left: 0.4em;
+    padding-left: 1.5em;
     margin-left: -0px;
     text-align: left;
     opacity: 0; /* Hide initially */
@@ -59,7 +59,6 @@
     color: #f0f0f0;
     position: relative;
     margin-top: 60px;
-    margin-right:22px;
     transition: color 0.3s ease-in-out;
 }
 
@@ -75,8 +74,9 @@
     gap: 20px; /* Adjust the gap between grid items as needed */
     max-width: 200px; /* Adjust the maximum width of the grid container as needed */
     opacity: 0; /* Hide initially */
-    margin-left:25px;
     padding-top:10px;
+    margin-left: 22%;
+
 }
 
 /* Style for each team member */
@@ -149,9 +149,10 @@
 
 /* Agreement */
 .agreement {
+    max-width: 45vh;
     overflow-y: scroll;
     position:fixed;
-    width:100vw;
+    width:95vw;
     color: #f0f0f0;
     font-size: 1em;
     line-height: 1.5;
@@ -159,7 +160,7 @@
     text-align: justify left;
     opacity: 0; /* Hide initially */
     margin-top: 70vh;
-    margin-left: -75px;
+    margin-left: -70px;
     transition: opacity 0.3 rgba(0, 0, 0, 0)
 }
 
