@@ -1,0 +1,169 @@
+/* Main Text Header */
+.main-text-header {
+    color: #f0f0f0;
+    font-size: 2em;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: color 0.3s ease-in-out;
+    width: 55%;
+    text-align: center;
+    font-weight: 750;
+    opacity: 0; /* Hide initially */
+}
+
+/* Animate the Main Text Header */
+.main-text-header.show {
+    opacity: 1;
+}
+
+.line-1,
+.line-2,
+.line-3,
+.line-4,
+.line-5 {
+    color: #f0f0f0;
+    position: relative;
+    font-weight: bolder;
+    font-size: 1.3em;
+    padding-left: 0.4em;
+    margin-left: -0px;
+    text-align: left;
+    opacity: 0; /* Hide initially */
+}
+
+/* Animate the lines */
+.line-1.show,
+.line-2.show,
+.line-3.show,
+.line-4.show,
+.line-5.show {
+    opacity: 1;
+    animation: fadeInLeft 1s ease-in-out;
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Team Members Header */
+.team-members-header {
+    font-weight: 899;
+    color: #f0f0f0;
+    position: relative;
+    margin-top: 120px;
+    margin-right:22px;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Animate the Team Members Header */
+.team-members-header.show {
+    opacity: 1;
+}
+
+/* Team Members */
+.team-members {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Adjust the number for the desired number of columns */
+    gap: 20px; /* Adjust the gap between grid items as needed */
+    max-width: 200px; /* Adjust the maximum width of the grid container as needed */
+    opacity: 0; /* Hide initially */
+    margin-left:55px;
+    padding-top:10px;
+}
+
+/* Style for each team member */
+.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* Animate the Team Members */
+.team-members.show {
+    opacity: 1;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Team Members Image */
+.team-members .team-member-image {
+    width: 64px;
+    height: 64px;
+    border-radius: 0;
+    box-shadow: 8px 10px 10px rgba(12, 12, 12, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    background-color: #0f0f0f;
+    position: relative;
+    overflow: hidden;
+    opacity: 0; /* Hide initially */
+}
+
+/* Animate the Team Members Image */
+.team-members .team-member-image.show {
+    opacity: 1;
+    animation: fadeInScale 0.8s ease-in-out;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Team Members Links */
+.team-member a {
+    font-size:1.5em;
+    color: #f0f0f0;
+    font-weight: bolder;
+    text-decoration: none;
+    transition: font-weight 0.3s ease-in-out;
+}
+
+.team-member a:hover {
+    font-weight: 900;
+}
+
+/* Agreement */
+.agreement {
+    position:absolute;
+    width:100vw;
+    color: #f0f0f0;
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin: 20px auto;
+    text-align: justify left;
+    opacity: 0; /* Hide initially */
+    margin-top: 500px;
+    margin-left: -50px;
+}
+
+/* Animate the Agreement */
+.agreement.show {
+    opacity: 1;
+    animation: fadeInUp 1s ease-in-out;
+}

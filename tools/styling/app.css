@@ -4,7 +4,6 @@ main {
     margin: 0 auto;
     padding: 20px;
 }
-
 .main-app {
     margin-top: 10px;
     position: relative;
@@ -191,7 +190,7 @@ main {
     border-radius: 2%;
     box-sizing: border-box;
     margin-left: 550px;
-    margin-bottom: 200px
+    margin-bottom: 300px
 }
 
 .button-container {
@@ -250,7 +249,7 @@ label {
 .treatment-container {
     position: absolute;
     width: 1700px;
-    margin-top: 500px;
+    margin-top: 1000px;
     margin-left: -460px
 }
 

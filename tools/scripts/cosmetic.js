@@ -86,17 +86,16 @@ function loadScript(url) {
   document.body.appendChild(script);
 }
 
-        // Function to check if the user is using a mobile device
-        function isMobileDevice() {
-          return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
-      }
+function isMobileDevice() {
+  return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+}
 
-      // Function to redirect mobile users to a different page
-      function redirectMobileUsers() {
-          if (isMobileDevice()) {
-              window.location.href = "mobile";
-          }
-      }
+// Function to redirect PC users to a different page
+function redirectPcUsers() {
+  if (!isMobileDevice()) {
+      window.location.href = "dekstop.html"; // Replace "pc.html" with your desired file
+  }
+}
 
-      // Call the redirect function when the page loads
-      window.onload = redirectMobileUsers;
+// Call the redirect function when the page loads
+window.onload = redirectPcUsers;

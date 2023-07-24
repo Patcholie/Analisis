@@ -1,12 +1,10 @@
+
+
 @font-face {
   font-family: "unispace";
   src: url("unispace bd.woff") format("woff");
   font-weight: bold;
   font-style: normal;
-}
-
-@media screen {
-  /* to be continued */
 }
 
 
@@ -59,3 +57,35 @@ body {
   min-height: 0%;
   width: 100%;
 }
+
+
+/* Animations for scroll effect */
+
+
+body {
+	background-color: #323442;
+	color: #fff;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+
+.animate-on-scroll {
+	opacity: 0;
+	transform: translate(0, 300px);
+	transition: all 0.4s ease-out;
+	transition-delay: 0.2s;
+}
+
+
+.scroll-up {
+	opacity: 1;
+	transform: translate(0, 100px);
+}
+

@@ -1,97 +1,157 @@
-<html>
-<head>
-  <title>Analisis</title>
-  <meta name="description" content="The application of Analisis. " />
-  <script defer src="https://unpkg.com/swup@3"></script>
-  <script defer src="tools/scripts/cosmetic.js"></script>
-  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" type="text/css" href="tools/styling/main/header.css" />
-  <link rel="stylesheet" type="text/css" href="tools/styling/main/main.css" />
-  <link rel="stylesheet" type="text/css" href="tools/styling/app.css" />
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Analisis</title>
+    <meta name="description" content="Analisis, Your Personal Wounds Assistant. Get Treatment in seconds using AI!">
+    <meta name="author" content="Analisis Group.">
+    <meta name="copyright" content="Analisis">
+    <meta name="robots" content="index, follow">
+    <meta name="rating" content="general">    <link rel="stylesheet" type="text/css" href="tools/styling/mobile/mobile.css" />
+    <link rel="stylesheet" type="text/css" href="tools/styling/mobile/dropdown.css" />
+    <link rel="stylesheet" type="text/css" href="tools/styling/mobile/dropdown_context.css" />
+
+
+    <title>ANALISIS</title>
 </head>
 
 <body>
     <video autoplay muted loop id="background-video" playsinline controls>
         <source src="assets/videos/back_test.mp4" type="video/mp4" />
     </video>
+    <nav role="navigation">
+        <div id="menuToggle">
+            <input id='logo-holder' type="checkbox">
+            <img id="logo" src="assets/images/logo.png" alt="Analisis Logo">
+            </input>
+            <ul id="menu">
+                <section class="about">
+                    <h1 class="main-text-header">ABOUT ANALISIS</h1>
+                    <div class="main-text">
+                        <p class="line-1">
+                            Analisis, the AI-powered application made to aid you anywhere
+                            anytime.
+                        </p>
+                        <p class="line-2">
+                            Our team of students has developed a solution that detects wounds
+                            using AI.
+                        </p>
+                        <p class="line-3">
+                            and provides you with a step-by-step guide on how to treat the
+                            injury.
+                        </p>
+                        <p class="line-4">
+                            Whether you're dealing with a minor scratch or a more serious
+                            injury, Analisis will be there.
+                        </p>
+                        <p class="line-5">
+                            We are working on improving Analisis to provide our users with the
+                            best experience possible.
+                        </p>
+                    </div>
+                    <h2 class="team-members-header">OUR TEAM</h2>
+                    <div class="team-members">
+                        <div class="team-member">
+                            <a href="https://github.com/marmust" target="_blank">
+                                <img src="assets/images/Daniel Varkin.png" alt="Daniel Varkin"
+                                    class="team-member-image" />
+                                <span class="team-member-name">Daniel Varkin</span>
+                            </a>
+                        </div>
+                        <div class="team-member">
+                            <a href="https://www.linkedin.com/in/aviv-shaked-59a4b7271/" target="_blank">
+                                <img src="assets/images/Aviv Shaked.png" alt="Aviv Shaked" class="team-member-image" />
+                                <span class="team-member-name">Aviv Shaked</span>
+                            </a>
+                        </div>
+                        <div class="team-member">
+                            <a href="https://twitter.com/BingEnjoyer1?t=U9uemwI9Xm77-MVJwY6YPw&s=09" target="_blank">
+                                <img src="assets/images/Yair Amar.png" alt="Yair Amar" class="team-member-image" />
+                                <span class="team-member-name">Yair Amar</span>
+                            </a>
+                        </div>
+                        <div class="team-member">
+                            <a href="https://barbermessedup.netlify.app/" target="_blank">
+                                <img src="assets/images/Eitan Worms.png" alt="Eitan Worms" class="team-member-image" />
+                                <span class="team-member-name">Eitan Worms</span>
+                            </a>
+                        </div>
+                        <div class="team-member">
+                            <a href="https://e621.net/posts/4038486?q=lizard" target="_blank">
+                                <img src="assets/images/Lior Kuznatz.png" alt="Lior Kuznatz"
+                                    class="team-member-image lior-center" />
+                                <span class="team-member-name">Lior Kuznatz</span>
+                            </a>
+                        </div>
+                        <div class="team-member canva">
+                            <a href="https://www.canva.com/design/DAFhroRoyXE/bfBKNXj8oNbQLNRz4-g1yQ/edit?utm_content=DAFhroRoyXE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+                                target="_blank">
+                                <img src="assets/images/canva.jpg" alt="Presentation" class="team-member-image" />
+                                <span class="team-member-name">Our Presentation</span>
+                            </a>
+                        </div>
+                        <p class="agreement">Disclaimer:
+                            Analisis is an AI-powered website offering treatment for physical skin injuries. However, it
+                            does not guarantee results, and its recommendations rarely might be inaccurate.
 
-  <div class="content">
-    <header>
-      <nav>
-        <a href="/home.html" class="logo">
-          <img src="assets/images/logo.png" alt="Analisis Logo" />
-        </a>
-        <ul class="page-selector">
-          <li><a href="./" class='highlight-selector' onclick='highlight_upper()'>App</a></li>
-          <li><a href="./home" onclick='highlight_upper()'>Home</a></li>
-          <li><a href="./help" onclick='highlight_upper()'>Help</a></li>
-        </ul>
-      </nav>
-    </header>
-  </div>
-  <main id="swup" class="transition-fade">
-    <link rel="stylesheet" type="text/css" href="tools/styling/app.css" />
-    <div class="main-app">
-      <main>
-        <div class="camera-container animate-on-scroll">
-          <video id="video" autoplay playsinline></video>
-          <div class="overlay">
-            <div class="plus-sign">+</div>
-          </div>
-          <canvas id="canvas"></canvas>
-        </div>
+                            Use Analisis at your own risk. We are not liable for any consequences resulting from its
+                            use.
 
-        <div class="slider-container">
-          <br />
-          <input type="range" min="0" max="10" value="0" class="slider" id="myRange" />
-          <p id="slider-value" style="font-size: 16px">No pain at all</p>
-        </div>
+                            By using Analisis, you accept these terms and release us from any claims or liabilities.
 
-        <div class="text-area-container">
-          <textarea id="text-area" rows="4" cols="50" placeholder="Enter notes about the wound here"></textarea>
+                        </p>
+            </ul>
         </div>
+    </nav>
+    <div style="background-color:invisible;"></div>
+    <main id="swup" class="transition-fade">
+        <audio id="sound" src="assets/sounds/sound.mp3"></audio>
+        <div class="main-app">
+            <main>
+                <div class="camera-container animate-on-scroll">
+                    <video id="video" autoplay playsinline></video>
+                    <div class="overlay">
+                        <div class="plus-sign">+</div>
+                    </div>
+                    <canvas id="canvas"></canvas>
+                </div>
+                <br />
+                <div class="button-container">
+                    <button id="analyze-button">Start ANALISIS</button>
+                </div>
 
-        <div class="body-part-container">
-          <div class="buttons">
-            <button type="submit" class="button" id="button1" onclick="handleButtonClick(1)"></button>
-            <div class="Head"></div>
-            <button type="submit" class="button" id="button2" onclick="handleButtonClick(2)"></button>
-            <div class="Chest"></div>
-            <button type="submit" class="button" id="button3" onclick="handleButtonClick(3)"></button>
-            <div class="R-Arm"></div>
-            <button type="submit" class="button" id="button4" onclick="handleButtonClick(4)"></button>
-            <div class="R-Hand"></div>
-            <button type="submit" class="button" id="button5" onclick="handleButtonClick(5)"></button>
-            <div class="L-Arm"></div>
-            <button type="submit" class="button" id="button6" onclick="handleButtonClick(6)"></button>
-            <div class="L-Hand"></div>
-            <button type="submit" class="button" id="button7" onclick="handleButtonClick(7)"></button>
-            <div class="Torso"></div>
-            <button type="submit" class="button" id="button8" onclick="handleButtonClick(8)"></button>
-            <div class="Legs"></div>
-            <button type="submit" class="button" id="button9" onclick="handleButtonClick(9)"></button>
-            <div class="Feet"></div>
-          </div>
-        </div>
+                <div class="slider-container">
+                    <br />
+                    <input type="range" min="0" max="10" value="0" class="slider" id="myRange" />
+                    <p id="slider-value">No pain at all</p>
+                </div>
 
-        <div class="button-container">
-          <button id="analyze-button">Start ANALISIS (CTRL + I)</button>
-        </div>
+                <div class="text-area-container">
+                    <textarea id="text-area" rows="4" cols="50"
+                        placeholder="Enter notes about the wound here"></textarea>
+                </div>
+                <div class="treatment-container animate-on-scroll">
+                    <hr />
+                    <h2 id="treat">TREATMENT</h2>
+                    <div class="result-container" id="result-container">
+                        <p id="result-text"></p>
+                    </div>
+                    <button onclick=TTS() class="tts-button" id="tts-button">TEXT TO SPEECH</button>
+                    <br />
 
-        <div class="treatment-container animate-on-scroll">
-          <hr />
-          <h2 id="treat">TREATMENT</h2>
-          <div class="result-container" id="result-container">
-            <p id="result-text"></p>
-          </div>
+                </div>
+            </main>
         </div>
-      </main>
-    </div>
-  </main>
-  
-  <script src="tools/scripts/app.js"></script>
+    </main>
+    </main>
+
 </body>
 
 </html>
+<script src="tools/scripts/app.js"></script>
+<script src="tools/scripts/cosmetic.js"></script>
+<script src="tools/scripts/mobile/mobile.js"></script>
+<script src="tools/scripts/mobile/dropdown.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>

@@ -1,15 +1,15 @@
 <html>
 
 <head>
-  <title>Home</title>
-  <meta name="description" content="Information about Analisis, including our presentation and team members." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Analisis - Home</title>
   <script defer src="https://unpkg.com/swup@3"></script>
   <script defer src="tools/scripts/cosmetic.js"></script>
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+
   <link rel="stylesheet" type="text/css" href="tools/styling/main/main.css" />
   <link rel="stylesheet" type="text/css" href="tools/styling/main/header.css" />
-  <link rel="stylesheet" type="text/css" href="tools/styling/home.css" />
 </head>
 <main>
   <video autoplay muted loop id="background-video">
@@ -19,13 +19,13 @@
   <div class="content">
     <header id="header">
       <nav>
-        <a href="./home" class="logo">
+        <a href="home.html" class="logo">
           <img src="assets/images/logo.png" alt="Analisis Logo" />
         </a>
         <ul class="page-selector">
           <li><a href="./" onclick='highlight_upper()'>App</a></li>
           <li><a href="./home" onclick='highlight_upper()'>Home</a></li>
-          <li><a href="./help" onclick='highlight_upper()'>Help</a></li>
+          <li><a class="help-page" href="./help" onclick='highlight_upper()'>Help</a></li>
         </ul>
       </nav>
     </header>
@@ -40,14 +40,17 @@
             Analisis, the AI-powered application made to aid you anywhere
             anytime.
           </p>
+          <p class="line-1-mobile anim-typewriter1">Analisis, The AI Personal Wounds Professional</p>
           <p class="line-2 anim-typewriter2">
             Our team of students has developed a solution that detects wounds
             using AI.
           </p>
+          <p class="line-2-mobile anim-typewriter1">Our team has developed a solution Which provides</p>
           <p class="line-3 anim-typewriter3">
             and provides you with a step-by-step guide on how to treat the
             injury.
           </p>
+          <p class="line-3-mobile anim-typewriter1">you with a step-by-step guide to treat your injury using AI </p>
           <p class="line-4 anim-typewriter4">
             Whether you're dealing with a minor scratch or a more serious
             injury, Analisis will be there.
@@ -85,28 +88,36 @@
             </a>
           </div>
           <div class="team-member">
-            <a href="https://example.com/lior-hi" target="_blank">
-              <img src="assets/images/Lior Kuznatz.png" alt="Lior Kuznatz" class="team-member-image" />
+            <a href="https://e621.net/posts/4038486?q=lizard" target="_blank">
+              <img src="assets/images/Lior Kuznatz.png" alt="Lior Kuznatz" class="team-member-image lior-center" />
               <span class="team-member-name">Lior Kuznatz</span>
             </a>
           </div>
+          <div class="team-member canva">
+            <a href="https://www.canva.com/design/DAFhroRoyXE/bfBKNXj8oNbQLNRz4-g1yQ/edit?utm_content=DAFhroRoyXE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+              target="_blank">
+              <img src="assets/images/canva.jpg" alt="Presentation" class="team-member-image" />
+              <span class="team-member-name">Our Presentation</span>
+            </a>
+          </div>  
         </div>
-      </section>
-
-      <section class="presentation">
-        <h1>Presentation with more info about this project:</h1>
-        <iframe src="assets/presentation.html" width="960" height="540" scrolling="no"></iframe>
-      </section>
-
-      <footer class="footer-note">
-        <p>
-          Please note that the use of Analisis is entirely at your own
-          discretion, and we cannot be held responsible for any negative
-          outcomes that may occur as a result.
-        </p>
-      </footer>
     </div>
-    
+    </section>
+
+    <section class="presentation">
+      <h1>Presentation with more info about this project:</h1>
+      <iframe src="assets/presentation.html" width="960" height="540" scrolling="no"></iframe>
+    </section>
+
+    <footer class="footer-note">
+      <p>
+        Please note that the use of Analisis is entirely at your own
+        discretion, and we cannot be held responsible for any negative
+        outcomes that may occur as a result.
+      </p>
+    </footer>
+    </div>
+
   </main>
   </body>
 

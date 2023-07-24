@@ -1,0 +1,132 @@
+
+
+#logo {
+  z-index:1;
+  cursor: pointer;
+  max-width: 64px;
+  max-height: 64px;
+  position: absolute;
+  display: block;
+  margin: 0 auto;
+  left:42.5vw;
+  top: -43px;
+  margin-bottom: 10px;
+  transition: transform 2s cubic-bezier(0.25, 0.1, 1, -0.44); /* Add transition for smooth animation */
+  box-shadow: 30px 5px 8px rgba(0, 0, 0, 0.2); /* Adjust the values to control the shadow appearance */
+  border-radius:5px;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0) translateY(0);
+  }
+
+  25% {
+    transform: translateX(-2px) translateY(-3px) rotateZ(-2deg);
+  }
+
+  50% {
+    transform: translateX(2px) translateY(3px) rotateZ(2deg);
+  }
+
+  75% {
+    transform: translateX(-2px) translateY(-3px) rotateZ(-2deg);
+  }
+}
+
+.animate_logo {
+  animation: shake 1s cubic-bezier(0.5, 0.05, 0.1, 0.3) infinite;
+}
+
+
+
+#menuToggle
+{
+  display: block;
+  position: absolute;
+  top: 50px;
+  z-index: 999;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input
+{
+  display: block;
+  width: 64px;
+  height: 32px;
+  position: absolute;
+  left:41.5vw;
+  top: -48px;
+  cursor: pointer;
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+}
+
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * hide the middle one
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+  position: absolute;
+  width: 100vw;
+  height: 120vh;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  text-align: center;
+  
+  background: rgba(22, 22, 22, 0.452); /* Use rgba to set alpha (transparency) */
+  -webkit-backdrop-filter: blur(10px); /* Blur effect for Safari */
+  backdrop-filter: blur(10px); /* Standard blur effect for other browsers */
+  
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased; /* to stop flickering of text in Safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(0, -100%);
+  
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+  
+}
+
+/*
+ * slide it in
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
