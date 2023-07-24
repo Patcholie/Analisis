@@ -58,7 +58,7 @@
     font-weight: 899;
     color: #f0f0f0;
     position: relative;
-    margin-top: 120px;
+    margin-top: 60px;
     margin-right:22px;
     transition: color 0.3s ease-in-out;
 }
@@ -75,7 +75,7 @@
     gap: 20px; /* Adjust the gap between grid items as needed */
     max-width: 200px; /* Adjust the maximum width of the grid container as needed */
     opacity: 0; /* Hide initially */
-    margin-left:55px;
+    margin-left:25px;
     padding-top:10px;
 }
 
@@ -114,7 +114,6 @@
     border: 2px solid rgba(255, 255, 255, 0.8);
     background-color: #0f0f0f;
     position: relative;
-    overflow: hidden;
     opacity: 0; /* Hide initially */
 }
 
@@ -150,16 +149,18 @@
 
 /* Agreement */
 .agreement {
-    position:absolute;
+    overflow-y: scroll;
+    position:fixed;
     width:100vw;
     color: #f0f0f0;
-    font-size: 1.2em;
+    font-size: 1em;
     line-height: 1.5;
     margin: 20px auto;
     text-align: justify left;
     opacity: 0; /* Hide initially */
-    margin-top: 500px;
-    margin-left: -50px;
+    margin-top: 70vh;
+    margin-left: -75px;
+    transition: opacity 0.3 rgba(0, 0, 0, 0)
 }
 
 /* Animate the Agreement */

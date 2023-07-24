@@ -4,6 +4,10 @@
     font-weight: bold;
     font-style: normal;
 }
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 
 body {
     font-family: "unispace", sans-serif;
@@ -96,9 +100,6 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-
 
 }
 
