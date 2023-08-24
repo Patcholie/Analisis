@@ -20,7 +20,7 @@
 <h2>Made within the AI4Y program</h2>
 <img src='https://i.ytimg.com/vi/MXINt_JB9t8/maxresdefault.jpg'>
 
-  <h3 style="color: #555;">TODO ( Currently Only CSS modifications )</h3>
+  <h3 style="color: #555;">TODO ( Currently Optional )</h3>
   <ul>
     <li style="16px; color: #666;">- the info website needs to show up in the Google search engine</li>
     <li style="color: #666;">- Further design with more animations and an overall smoother look (main CSS)</li>
