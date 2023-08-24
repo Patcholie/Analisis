@@ -22,10 +22,7 @@
 
   <h3 style="color: #555;">TODO ( Currently Only CSS modifications )</h3>
   <ul>
-    <li style="color: #666;">- Might change so it doesn't ask for camera in each website ( Add a deticated camera.js file for the camera as a script )</li>
-    <li style="color: #666;">- Need to organize CSS</li>
-    <li style="16px; color: #666;">- We need to make the website work on phones (or create a new one specifically for phones)</li>
+    <li style="16px; color: #666;">- the info website needs to show up in the Google search engine</li>
     <li style="color: #666;">- Further design with more animations and an overall smoother look (main CSS)</li>
-    <li style="color: #666;">- Upload the website to a web address (analisis-ai.com // analisis-medical.com)</li>
   </ul>
 
